@@ -1,0 +1,123 @@
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  width: 100%;
+  height: 100%;
+  animation: gridMove 20s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+/* Circuit Lines */
+.circuit-lines {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.05) 50%, transparent 100%);
+  opacity: 0.3;
+  animation: pulseLines 4s ease-in-out infinite;
+}
+
+@keyframes pulseLines {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Cyber Shield Icon */
+.cyber-shield-icon {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E") center/contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E") center/contain no-repeat;
+  animation: shieldPulse 2s ease-in-out infinite;
+}
+
+@keyframes shieldPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+/* Cyber Glitch Text Effect */
+.cyber-glitch-text {
+  position: relative;
+  text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 30px rgba(0, 255, 255, 0.1);
+  animation: textGlitch 5s infinite;
+}
+
+@keyframes textGlitch {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(0, 255, 255, 0.5),
+      0 0 20px rgba(0, 255, 255, 0.3),
+      0 0 30px rgba(0, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 12px rgba(0, 255, 255, 0.6),
+      0 0 24px rgba(0, 255, 255, 0.4),
+      0 0 36px rgba(0, 255, 255, 0.2);
+  }
+}
+
+/* Cyber Link Style */
+.cyber-link {
+  position: relative;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Input Field Styling */
+.input-field {
+  @apply block w-full px-3 py-2 border rounded-md shadow-sm;
+  @apply bg-gray-900 border-cyan-800 text-white;
+  @apply focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500;
+  @apply placeholder-gray-400;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-field:hover {
+  @apply border-cyan-600;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.input-field:focus {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+} 

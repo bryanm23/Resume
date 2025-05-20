@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-cyan-400;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors;
+  }
+
+  .input-field {
+    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:bg-gray-800;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6;
+  }
+
+  .cyber-grid {
+    background-image: linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: grid-scroll 20s linear infinite;
+  }
+
+  .cyber-card {
+    @apply relative bg-gray-900/80 backdrop-blur-xl p-6 rounded-lg border border-cyan-500/30 shadow-lg shadow-cyan-500/20;
+  }
+
+  .cyber-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 rounded-lg transition-opacity duration-300;
+  }
+
+  .cyber-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .cyber-heading {
+    @apply text-2xl font-bold text-cyan-400 mb-6 relative inline-block;
+  }
+
+  .cyber-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 transform scale-x-0 transition-transform duration-300 origin-left;
+  }
+
+  .cyber-heading:hover::after {
+    @apply scale-x-100;
+  }
+
+  .cyber-tag {
+    @apply px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-md border border-cyan-500/30 text-sm;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .cyber-link {
+    @apply text-cyan-400 hover:text-cyan-300 transition-colors duration-300 relative;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  }
+
+  .cyber-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-cyan-500 transform scale-x-0 transition-transform duration-300;
+  }
+
+  .cyber-link:hover::after {
+    @apply scale-x-100;
+  }
+
+  .cyber-progress {
+    @apply h-2 bg-gray-800 rounded-full overflow-hidden relative;
+  }
+
+  .cyber-progress-bar {
+    @apply h-full bg-gradient-to-r from-cyan-500 to-blue-500;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .cyber-glitch-text {
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    animation: glitch 500ms infinite;
+  }
+}
+
+@keyframes grid-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 20px;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: 
+      -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+code {
+  font-family: 'Share Tech Mono', monospace;
+}
