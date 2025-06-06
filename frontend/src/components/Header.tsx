@@ -11,22 +11,24 @@ const Header: React.FC<HeaderProps> = ({ basics }) => {
       <h1 className="text-4xl font-bold mb-2">{basics.name}</h1>
       <h2 className="text-xl mb-4">{basics.label}</h2>
       <div className="flex justify-center space-x-4 mb-4">
-        <a href={`mailto:${basics.email}`} className="hover:text-primary-200">
-          {basics.email}
-        </a>
-        <span>•</span>
         <span>{basics.phone}</span>
         <span>•</span>
         <span>{basics.location}</span>
       </div>
       <div className="flex justify-center space-x-4">
+        <a
+          href={`mailto:${basics.email}`}
+          className="text-blue-300 hover:text-blue-100 underline"
+        >
+          Email
+        </a>
         {basics.profiles.map((profile) => (
           <a
             key={profile.network}
             href={profile.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary-200"
+            className="text-blue-300 hover:text-blue-100 underline"
           >
             {profile.network}
           </a>
