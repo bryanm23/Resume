@@ -24,11 +24,6 @@ const Resume: React.FC = () => {
     transition: { duration: 0.5 }
   };
 
-  const handleEditProject = (project: Project, index: number) => {
-    setEditingProject(project);
-    setEditingIndex(index);
-  };
-
   const handleSaveProject = (editedProject: Project) => {
     const newData = { ...data };
     newData.projects[editingIndex] = editedProject;
