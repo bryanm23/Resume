@@ -154,18 +154,6 @@ const Resume: React.FC = () => {
                 key={project.name}
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 relative group"
               >
-                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <button
-                    onClick={() => handleEditProject(project, index)}
-                    className="p-1 text-gray-400 hover:text-cyan-400"
-                    title="Edit project"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                    </svg>
-                  </button>
-                </div>
-                
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center">
                     {project.name}
