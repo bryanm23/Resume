@@ -58,6 +58,7 @@ export interface Project {
   liveUrl?: string;
   technologies: string[];
   featured: boolean;
+  type: 'offensive' | 'defensive' | 'research' | 'tool' | 'full-stack';
 }
 
 export interface ContactMessage {

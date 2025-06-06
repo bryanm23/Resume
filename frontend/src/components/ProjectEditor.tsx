@@ -7,7 +7,7 @@ interface Project {
   securityFeatures?: string[];
   github?: string;
   link?: string;
-  type: 'offensive' | 'defensive' | 'research' | 'tool';
+  type: 'offensive' | 'defensive' | 'research' | 'tool' | 'full-stack';
 }
 
 interface ProjectEditorProps {
@@ -127,6 +127,7 @@ const ProjectEditor: React.FC<ProjectEditorProps> = ({ project, onSave, onCancel
             <option value="defensive">Defensive</option>
             <option value="research">Research</option>
             <option value="tool">Tool</option>
+            <option value="full-stack">Full-Stack</option>
           </select>
         </div>
         

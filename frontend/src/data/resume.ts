@@ -23,7 +23,7 @@ export interface Project {
   securityFeatures?: string[];
   github?: string;
   link?: string;
-  type: 'offensive' | 'defensive' | 'research' | 'tool';
+  type: 'offensive' | 'defensive' | 'research' | 'tool' | 'full-stack';
 }
 
 export interface Skill {
@@ -57,17 +57,17 @@ export const resumeData: Resume = {
     name: "Bryan Madewell",
     label: "Software Engineer",
     email: "bm47@njit.edu",
-    phone: "(123) 456-7890",
+    phone: "",
     location: "New Jersey",
     summary: "Passionate software engineer with experience in full-stack development, focusing on creating efficient and user-friendly applications.",
     profiles: [
       {
         network: "GitHub",
-        url: "https://github.com/yourusername"
+        url: "https://github.com/bryanm23"
       },
       {
         network: "LinkedIn",
-        url: "https://linkedin.com/in/yourusername"
+        url: "https://www.linkedin.com/in/bryan-madewell-21367823a/"
       }
     ]
   },

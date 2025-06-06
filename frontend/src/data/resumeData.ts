@@ -47,7 +47,7 @@ export interface ResumeData {
     securityFeatures?: string[];
     github?: string;
     link?: string;
-    type: 'offensive' | 'defensive' | 'research' | 'tool';
+    type: 'offensive' | 'defensive' | 'research' | 'tool' | 'full-stack';
   }[];
 }
 
@@ -73,17 +73,17 @@ export const resumeData: ResumeData = {
       {
         name: "Switching, Routing, and Wireless Essentials",
         issuer: "Cisco",
-        date: "2023"
+        date: "2024"
       },
       {
         name: "Introduction to Networks",
         issuer: "Cisco",
-        date: "2022"
+        date: "2024"
       },
       {
         name: "Introduction to Cybersecurity",
         issuer: "Cisco",
-        date: "2022"
+        date: "2024"
       }
     ]
   },
@@ -91,9 +91,9 @@ export const resumeData: ResumeData = {
   education: [
     {
       school: "New Jersey Institute of Technology",
-      degree: "Bachelor of Science",
+      degree: "B.S.",
       field: "Information Technology - Network and Information Security",
-      startDate: "September 2021",
+      startDate: "",
       endDate: "May 2025",
       description: "Focus on network security, system administration, and cybersecurity fundamentals.",
       relevantCourses: [
@@ -138,8 +138,8 @@ export const resumeData: ResumeData = {
         "DoS protection",
         "Real-time log monitoring and analysis"
       ],
-      github: "",
-      type: "defensive"
+      github: "https://github.com/bryanm23/InvestorIQ",
+      type: "full-stack"
     },
     {
       name: "Antivirus - Independent Study",
@@ -151,7 +151,7 @@ export const resumeData: ResumeData = {
         "Unauthorized autorun detection",
         "Active Directory integration"
       ],
-      github: "",
+      github: "https://github.com/bryanm23/IS488",
       type: "defensive"
     },
     {
@@ -164,8 +164,8 @@ export const resumeData: ResumeData = {
         "Traffic filtering",
         "User authentication"
       ],
-      github: "",
-      type: "defensive"
+      github: "https://lookio.io",
+      type: "full-stack"
     }
   ]
 }; 
