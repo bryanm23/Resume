@@ -1,6 +1,55 @@
-# Resume Website
+# Personal Resume Website
 
-A personal resume website built with React.js frontend, Spring Boot backend, PostgreSQL database, and RabbitMQ message broker.
+A modern, responsive personal resume website built with React and Tailwind CSS.
+
+## Features
+
+- Responsive design
+- Modern UI with Tailwind CSS
+- TypeScript for type safety
+- Easy to customize and maintain
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/bryanm23/Investor.git
+cd Investor
+```
+
+2. Install dependencies:
+```bash
+cd frontend
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+The site will be available at `http://localhost:3000`.
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The build files will be in the `build` directory.
+
+## Technologies Used
+
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Technology Stack
 
