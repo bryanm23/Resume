@@ -62,11 +62,11 @@ export const resumeData: ResumeData = {
     profiles: [
       {
         network: "GitHub",
-        url: "https://github.com/yourusername"
+        url: "https://github.com/bryanm23"
       },
       {
         network: "LinkedIn",
-        url: "https://linkedin.com/in/yourusername"
+        url: "https://www.linkedin.com/in/bryan-madewell-21367823a/"
       }
     ],
     certifications: [

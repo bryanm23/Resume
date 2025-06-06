@@ -100,7 +100,7 @@ export const resumeData: Resume = {
       name: "Personal Resume Website",
       description: "A responsive resume website built with React and TypeScript",
       technologies: ["React", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com/yourusername/resume-website",
+      github: "https://github.com/bryanm23/Resume",
       type: "tool",
       securityFeatures: [
         "Secure authentication",
