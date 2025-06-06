@@ -55,7 +55,7 @@ export const resumeData: ResumeData = {
   basics: {
     name: "Bryan Madewell",
     label: "Aspiring Cybersecurity Professional",
-    email: "bm47@njit.edu",
+    email: "bryan@bryanmadewell.com",
     phone: "(123) 456-7890",
     location: "New Jersey",
     summary: "Aspiring cybersecurity professional with experience in threat mitigation, malware analysis, and network security. Proven leader in project and team environments, driven to enhance digital infrastructure and security architectures.",

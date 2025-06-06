@@ -56,7 +56,7 @@ export const resumeData: Resume = {
   basics: {
     name: "Bryan Madewell",
     label: "Software Engineer",
-    email: "bm47@njit.edu",
+    email: "bryan@bryanmadewell.com",
     phone: "",
     location: "New Jersey",
     summary: "Passionate software engineer with experience in full-stack development, focusing on creating efficient and user-friendly applications.",
