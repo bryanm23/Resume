@@ -1,5 +1,6 @@
 # Personal Resume Website
 
+<!--
 A modern, responsive personal resume website built with React and Tailwind CSS.
 
 ## Features
@@ -117,3 +118,5 @@ The application uses two main queues:
 ## Database
 
 The PostgreSQL database is automatically created when running the Docker containers. The database name is `resume_db` with default credentials (username: postgres, password: postgres). 
+
+-->
