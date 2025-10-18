@@ -71,17 +71,17 @@ export const resumeData: ResumeData = {
     ],
     certifications: [
       {
+        name: "CompTIA Security+",
+        issuer: "CompTIA",
+        date: "2025"
+      },
+      {
         name: "Switching, Routing, and Wireless Essentials",
         issuer: "Cisco",
         date: "2024"
       },
       {
         name: "Introduction to Networks",
-        issuer: "Cisco",
-        date: "2024"
-      },
-      {
-        name: "Introduction to Cybersecurity",
         issuer: "Cisco",
         date: "2024"
       }
