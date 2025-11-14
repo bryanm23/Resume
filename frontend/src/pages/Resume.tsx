@@ -52,8 +52,9 @@ const Resume: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <motion.header 
           className="text-center mb-12"
@@ -276,6 +277,7 @@ const Resume: React.FC = () => {
             ))}
           </div>
         </motion.section>
+        </div>
       </div>
     </div>
   );
