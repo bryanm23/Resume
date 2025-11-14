@@ -42,93 +42,107 @@ const Security: React.FC = () => {
   const services = [
     {
       icon: ShieldCheckIcon,
-      title: 'Penetration Testing',
-      description: 'Comprehensive security assessments to identify vulnerabilities in your systems, networks, and applications before attackers do.',
+      title: 'Security Hardening',
+      description: 'Strengthen systems, networks, and devices to reduce risk.',
       features: [
-        'Network penetration testing',
-        'Web application security testing',
-        'Mobile app security assessment',
-        'Social engineering simulations'
-      ]
-    },
-    {
-      icon: LockClosedIcon,
-      title: 'Security Audits',
-      description: 'Thorough evaluation of your security posture, policies, and procedures to ensure compliance and best practices.',
-      features: [
-        'Security policy review',
-        'Compliance assessments (SOC 2, ISO 27001)',
-        'Infrastructure security audits',
-        'Code security reviews'
-      ]
-    },
-    {
-      icon: KeyIcon,
-      title: 'Vulnerability Assessment',
-      description: 'Systematic identification and classification of security weaknesses in your IT infrastructure.',
-      features: [
-        'Automated vulnerability scanning',
-        'Manual security testing',
-        'Risk prioritization',
-        'Remediation guidance'
+        'Windows hardening',
+        'Router/WiFi security',
+        'Password best practices',
+        'MFA setup',
+        'Device configuration reviews'
       ]
     },
     {
       icon: EyeIcon,
-      title: 'Security Monitoring',
-      description: '24/7 monitoring and threat detection to protect your assets from emerging security threats.',
+      title: 'Threat Detection & Analysis',
+      description: "Identify suspicious behavior and understand what's happening under the hood.",
       features: [
-        'SIEM implementation',
-        'Threat intelligence',
-        'Incident response',
-        'Security operations center (SOC) services'
-      ]
-    },
-    {
-      icon: DocumentMagnifyingGlassIcon,
-      title: 'Security Consulting',
-      description: 'Expert guidance on building robust security architectures and implementing security best practices.',
-      features: [
-        'Security architecture design',
-        'Security training and awareness',
-        'Incident response planning',
-        'Security program development'
+        'Log analysis',
+        'Event Viewer',
+        'Sysinternals tools',
+        'Basic malware behavior analysis',
+        'Process investigation'
       ]
     },
     {
       icon: ServerIcon,
-      title: 'Cloud Security',
-      description: 'Specialized security services for cloud environments including AWS, Azure, and GCP.',
+      title: 'Network Security',
+      description: 'Protect and monitor small business and home networks.',
       features: [
-        'Cloud security assessments',
-        'Cloud infrastructure hardening',
-        'Identity and access management',
-        'Cloud compliance audits'
+        'Network segmentation',
+        'WiFi security checks',
+        'Basic firewall configuration',
+        'Port scanning & network mapping',
+        'Vulnerability identification'
+      ]
+    },
+    {
+      icon: LockClosedIcon,
+      title: 'Cloud & Email Security',
+      description: 'Secure modern small-business environments.',
+      features: [
+        'Google Workspace / M365 hardening',
+        'MFA enforcement',
+        'Phishing protection',
+        'Shared drive access cleanup',
+        'Email security policies'
+      ]
+    },
+    {
+      icon: KeyIcon,
+      title: 'Incident Readiness',
+      description: 'Help individuals and small businesses prepare for security issues.',
+      features: [
+        'Backup verification',
+        'Recovery planning',
+        'Password hygiene',
+        'Ex-employee access audits',
+        'Basic incident response steps'
+      ]
+    },
+    {
+      icon: DocumentMagnifyingGlassIcon,
+      title: 'Small Business Security Checkups',
+      description: 'Exactly the service you want to offer.',
+      features: [
+        'On-site device + WiFi assessment',
+        'Router security inspection',
+        'Laptop security review',
+        'Physical security review',
+        'PDF risk report'
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <motion.section 
-        className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20 px-4 sm:px-6 lg:px-8"
+        className="relative animated-gradient text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
         {...fadeIn}
       >
-        <div className="max-w-7xl mx-auto text-center">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 right-20 w-96 h-96 bg-white/10 rounded-full blur-3xl float-animation"></div>
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-white/10 rounded-full blur-3xl float-animation" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <ShieldCheckIcon className="h-24 w-24 mx-auto mb-6 text-cyan-300" />
+            <div className="inline-block p-6 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+              <ShieldCheckIcon className="h-24 w-24 mx-auto text-white" />
+            </div>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg"
           >
             Cybersecurity Services
           </motion.h1>
@@ -136,7 +150,7 @@ const Security: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-cyan-100 max-w-3xl mx-auto mb-8"
+            className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10"
           >
             Protecting your digital assets with expert security solutions
           </motion.p>
@@ -148,13 +162,13 @@ const Security: React.FC = () => {
           >
             <a
               href="#contact"
-              className="px-8 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-cyan-50 transition-colors shadow-lg"
+              className="px-8 py-3 bg-white text-primary-700 font-semibold rounded-lg hover:bg-gray-100 transition-all shadow-lg hover-lift hover:shadow-xl"
             >
               Get Started
             </a>
             <a
               href="#services"
-              className="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+              className="px-8 py-3 bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white font-semibold rounded-lg hover:bg-white/20 transition-all hover:border-white"
             >
               View Services
             </a>
@@ -190,25 +204,28 @@ const Security: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
+                  className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl shadow-lg p-8 hover-lift glow-on-hover border border-gray-200/50 dark:border-gray-700/50 relative overflow-hidden group"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-lg mb-6">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 via-primary-400 to-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                  <div className="relative z-10">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-lg mb-6">
                     <Icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-gray-700 dark:text-gray-300">
-                        <span className="text-primary-600 dark:text-primary-400 mr-2">✓</span>
+                        <span className="text-primary-600 dark:text-primary-400 mr-3 font-semibold">✓</span>
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
+                  </div>
                 </motion.div>
               );
             })}
@@ -217,7 +234,7 @@ const Security: React.FC = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -237,8 +254,8 @@ const Security: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Expert Team',
-                description: 'Certified security professionals with years of experience in offensive and defensive security.'
+                title: 'Certified Security Professional',
+                description: 'Certified security professional with experience in offensive and defensive security.'
               },
               {
                 title: 'Proven Methodology',
@@ -255,14 +272,17 @@ const Security: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center"
+                className="bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-xl p-8 text-center border border-gray-200/50 dark:border-gray-600/50 hover-lift relative overflow-hidden group"
               >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {item.description}
                 </p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -292,7 +312,7 @@ const Security: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-12"
+            className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl shadow-lg p-8 md:p-12 border border-gray-200/50 dark:border-gray-700/50 hover-lift"
           >
             <form 
               name="security-contact" 
@@ -386,14 +406,24 @@ const Security: React.FC = () => {
               <button
                 type="submit"
                 disabled={formStatus === 'submitting'}
-                className="w-full px-8 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-8 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover-lift disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
               >
-                {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
+                <span className="relative z-10">{formStatus === 'submitting' ? 'Sending...' : 'Send Message'}</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </button>
             </form>
           </motion.div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-8 mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; {new Date().getFullYear()} Bryan Madewell. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
