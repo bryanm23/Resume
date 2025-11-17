@@ -11,16 +11,26 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Bryan Madewell</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!-- Hidden form for Netlify Forms detection -->
-    <form name="security-contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="text" name="service" />
-      <textarea name="message"></textarea>
-    </form>
-    <div id="root"></div>
+      <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <!-- SVG Filter for Liquid Glass Effect -->
+        <svg style="position: absolute; width: 0; height: 0;">
+          <defs>
+            <filter id="liquid-glass" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"/>
+              <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+          </defs>
+        </svg>
+        <!-- Hidden form for Netlify Forms detection -->
+        <form name="security-contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="text" name="service" />
+          <textarea name="message"></textarea>
+        </form>
+        <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

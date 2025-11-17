@@ -18,7 +18,7 @@ export default function IntroLaptop({ onFinish }: { onFinish: () => void }) {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-100"
+      className="fixed inset-0 z-50 flex items-center justify-center ios-bg-light"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -59,10 +59,10 @@ export default function IntroLaptop({ onFinish }: { onFinish: () => void }) {
             initial={{ rotateX: 90 }}
             animate={
               stage === "closed"
-                ? { 
+                ? {
                     rotateX: 90,
                   }
-                : { 
+                : {
                     rotateX: 0,
                   }
             }
@@ -94,21 +94,21 @@ export default function IntroLaptop({ onFinish }: { onFinish: () => void }) {
                           {/* Name header */}
                           <div className="h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded w-2/3"></div>
                           <div className="h-1 bg-gray-300 rounded w-1/3"></div>
-                          
+
                           {/* Section preview */}
                           <div className="mt-2 space-y-1">
                             <div className="h-1 bg-gray-400 rounded w-1/4"></div>
                             <div className="h-0.5 bg-gray-200 rounded w-full"></div>
                             <div className="h-0.5 bg-gray-200 rounded w-5/6"></div>
                           </div>
-                          
+
                           {/* Card preview */}
                           <div className="mt-1.5 p-1 bg-gray-50 rounded border border-gray-200">
                             <div className="h-1 bg-gray-300 rounded w-1/3 mb-1"></div>
                             <div className="h-0.5 bg-gray-200 rounded w-full mb-0.5"></div>
                             <div className="h-0.5 bg-gray-200 rounded w-4/5"></div>
                           </div>
-                          
+
                           {/* Tags */}
                           <div className="mt-1.5 flex gap-1 flex-wrap">
                             <div className="h-0.5 bg-blue-200 rounded-full w-8"></div>

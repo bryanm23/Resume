@@ -123,9 +123,9 @@ const Security: React.FC = () => {
       >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 right-20 w-96 h-96 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-3xl float-animation"></div>
-          <div className="absolute bottom-10 left-20 w-80 h-80 bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-3xl float-animation" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-300/20 dark:bg-pink-500/10 rounded-full blur-3xl float-animation" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-10 right-20 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl float-animation"></div>
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl float-animation" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-200/20 rounded-full blur-3xl float-animation" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -163,17 +163,15 @@ const Security: React.FC = () => {
           >
             <a
               href="#contact"
-              className="ios-button px-8 py-3.5 text-blue-700 font-semibold rounded-2xl relative overflow-hidden group"
+              className="ios-button px-8 py-3.5 font-medium"
             >
               <span className="relative z-10">Get Started</span>
-              <span className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
             <a
               href="#services"
-              className="ios-button px-8 py-3.5 text-blue-700 font-semibold rounded-2xl relative overflow-hidden group"
+              className="ios-button px-8 py-3.5 font-medium"
             >
               <span className="relative z-10">View Services</span>
-              <span className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
           </motion.div>
         </div>
@@ -353,7 +351,7 @@ const Security: React.FC = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 ios-glass rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 ios-glass-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
                   placeholder="Your name"
                 />
               </div>
@@ -366,7 +364,7 @@ const Security: React.FC = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 ios-glass rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 ios-glass-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -396,17 +394,16 @@ const Security: React.FC = () => {
                   name="message"
                   required
                   rows={6}
-                  className="w-full px-4 py-3 ios-glass rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 ios-glass-input rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
                   placeholder="Tell us about your security needs..."
                 />
               </div>
                   <button
                     type="submit"
                     disabled={formStatus === 'submitting'}
-                    className="w-full ios-button px-8 py-3.5 text-blue-700 font-semibold rounded-2xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 relative overflow-hidden group"
+                    className="w-full ios-button px-8 py-3.5 font-medium disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none"
                   >
                     <span className="relative z-10">{formStatus === 'submitting' ? 'Sending...' : 'Send Message'}</span>
-                    <span className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </button>
             </form>
           </motion.div>

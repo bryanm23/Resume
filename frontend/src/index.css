@@ -321,53 +321,222 @@ code {
 
 /* iOS Liquid Glass Design */
 .ios-glass {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(200%) blur(30px);
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 
     0 8px 32px 0 rgba(31, 38, 135, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05);
   color: #111827;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ios-glass:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    0 12px 40px 0 rgba(31, 38, 135, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Enhanced liquid glass for tags/badges - matching button style */
+.ios-glass-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--glass-radius-lg);
+  border: 1px solid var(--glass-border-soft);
+  background: rgba(255, 255, 255, 0.3);
+  color: #1f2937;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  overflow: hidden;
+  transform: translateY(0) scale(1);
+  transition:
+    transform 180ms ease-out,
+    box-shadow 180ms ease-out,
+    border-color 180ms ease-out,
+    background 220ms ease-out;
+  font-weight: 500;
+}
+
+/* Top sheen */
+.ios-glass-tag::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.3),
+      transparent 50%);
+  opacity: 1;
+  pointer-events: none;
+}
+
+.ios-glass-tag:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #111827;
+}
+
+/* Enhanced liquid glass for form inputs */
+.ios-glass-input {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(200%) blur(30px);
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 4px 16px 0 rgba(31, 38, 135, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ios-glass-input:focus {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 122, 255, 0.6);
+  box-shadow: 
+    0 6px 20px 0 rgba(0, 122, 255, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05),
+    0 0 0 3px rgba(0, 122, 255, 0.1);
+  outline: none;
+}
+
+.ios-glass-input:hover {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .ios-glass-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: saturate(200%) blur(30px);
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    0 8px 32px 0 rgba(31, 38, 135, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   color: #111827;
+  position: relative;
+  overflow: hidden;
+}
+
+.ios-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.8s ease;
+  pointer-events: none;
 }
 
 .ios-glass-card:hover {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.9);
   transform: translateY(-4px);
   box-shadow: 
-    0 12px 40px 0 rgba(31, 38, 135, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 16px 48px 0 rgba(31, 38, 135, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.ios-glass-card:hover::before {
+  left: 100%;
+}
+
+/* Liquid Glass Button Effect - Clean and Vibrant */
+:root {
+  --glass-radius-lg: 999px;
+  --glass-radius-md: 24px;
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-border-soft: rgba(255, 255, 255, 0.25);
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-highlight: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .ios-button {
-  background: rgba(0, 122, 255, 0.15);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border: 1px solid rgba(0, 122, 255, 0.3);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--glass-radius-lg);
+  border: 1px solid var(--glass-border-soft);
+  background: rgba(255, 255, 255, 0.3);
+  color: #1f2937;
+  cursor: pointer;
   box-shadow: 
-    0 4px 16px 0 rgba(0, 122, 255, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  overflow: hidden;
+  transform: translateY(0) scale(1);
+  transition:
+    transform 180ms ease-out,
+    box-shadow 180ms ease-out,
+    border-color 180ms ease-out,
+    background 220ms ease-out;
+  font-weight: 500;
+}
+
+/* Top sheen - cleaner */
+.ios-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.3),
+      transparent 50%);
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Remove bottom shadow for cleaner look */
+.ios-button::after {
+  display: none;
 }
 
 .ios-button:hover {
-  background: rgba(0, 122, 255, 0.25);
-  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 
-    0 6px 20px 0 rgba(0, 122, 255, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #111827;
+}
+
+.ios-button:active {
+  transform: translateY(0) scale(1);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  color: #111827;
 }
 
 .ios-bg {
@@ -376,6 +545,40 @@ code {
   animation: gradient-shift 15s ease infinite;
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .ios-bg-light {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, 
+    rgba(245, 247, 250, 0.95) 0%, 
+    rgba(240, 242, 245, 0.95) 25%, 
+    rgba(235, 237, 240, 0.95) 50%, 
+    rgba(240, 245, 250, 0.95) 75%, 
+    rgba(245, 250, 255, 0.95) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 25s ease infinite;
+  position: relative;
+}
+
+.ios-bg-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(147, 197, 253, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(196, 181, 253, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(165, 243, 252, 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }

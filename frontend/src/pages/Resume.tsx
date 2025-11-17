@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { resumeData, ResumeData } from '../data/resumeData';
 import ProjectEditor from '../components/ProjectEditor';
-import IntroLaptop from '../components/IntroLaptop';
 
 interface Project {
   name: string;
@@ -18,7 +17,6 @@ const Resume: React.FC = () => {
   const [data, setData] = useState<ResumeData>(resumeData);
   const [editingProject, setEditingProject] = useState<Project | null>(null);
   const [editingIndex, setEditingIndex] = useState<number>(-1);
-  const [showIntro, setShowIntro] = useState<boolean>(true);
 
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -39,14 +37,6 @@ const Resume: React.FC = () => {
     setEditingIndex(-1);
   };
 
-  const handleIntroFinish = () => {
-    setShowIntro(false);
-  };
-
-  if (showIntro) {
-    return <IntroLaptop onFinish={handleIntroFinish} />;
-  }
-
   if (editingProject) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
@@ -65,9 +55,9 @@ const Resume: React.FC = () => {
     <div className="min-h-screen ios-bg-light relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-300/20 dark:bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-pink-300/20 dark:bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-cyan-200/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
       <div className="py-12 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -94,10 +84,9 @@ const Resume: React.FC = () => {
             <p className="text-lg text-gray-800">{data.basics.location}</p>
             <a 
               href={`mailto:${data.basics.email}`}
-              className="ios-button px-6 py-2.5 text-blue-700 font-semibold rounded-2xl relative overflow-hidden group"
+              className="ios-button px-6 py-2.5 font-medium"
             >
               <span className="relative z-10">{data.basics.email}</span>
-              <span className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
             <div className="flex justify-center space-x-4 pt-2">
               {data.basics.profiles.map((profile) => (
@@ -106,10 +95,9 @@ const Resume: React.FC = () => {
                   href={profile.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ios-button px-6 py-2.5 text-blue-700 font-semibold rounded-2xl relative overflow-hidden group"
+                  className="ios-button px-6 py-2.5 font-medium"
                 >
                   <span className="relative z-10">{profile.network}</span>
-                  <span className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </a>
               ))}
             </div>
@@ -157,7 +145,7 @@ const Resume: React.FC = () => {
                       {edu.relevantCourses.map((course, idx) => (
                         <span
                           key={idx}
-                          className="px-4 py-2 ios-glass rounded-full text-sm font-medium text-gray-900"
+                          className="px-4 py-2 ios-glass-tag rounded-full text-sm font-medium text-gray-900"
                         >
                           {course}
                         </span>
@@ -209,7 +197,7 @@ const Resume: React.FC = () => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-4 py-2 ios-glass rounded-full text-sm font-medium text-gray-900"
+                      className="px-4 py-2 ios-glass-tag rounded-full text-sm font-medium text-gray-900"
                     >
                       {tech}
                     </span>
@@ -228,7 +216,7 @@ const Resume: React.FC = () => {
                   </div>
                 )}
                 <div className="mt-4">
-                  <span className="inline-block px-4 py-2 ios-glass rounded-full text-sm font-semibold text-gray-900">
+                  <span className="inline-block px-4 py-2 ios-glass-tag rounded-full text-sm font-semibold text-gray-900">
                     {project.type.charAt(0).toUpperCase() + project.type.slice(1)}
                   </span>
                 </div>
@@ -259,7 +247,7 @@ const Resume: React.FC = () => {
                   {skillGroup.items.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 ios-glass rounded-full text-sm font-medium text-gray-900"
+                      className="px-3 py-1.5 ios-glass-tag rounded-full text-sm font-medium text-gray-900"
                     >
                       {skill}
                     </span>
