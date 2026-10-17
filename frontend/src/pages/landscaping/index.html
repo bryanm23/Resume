@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Greenwood Estate Care — refined lawn care and landscape design in Sussex County, NJ. Manicured lawns, seasonal planting, and estate maintenance since 1998."
+    />
+    <title>Greenwood Estate Care | Landscape & Lawn</title>
+    <script>
+      (function () {
+        var path = window.location.pathname.replace(/\/index\.html$/, "/");
+        var marker = "/landscaping";
+        var index = path.indexOf(marker);
+        var base = (index >= 0 ? path.slice(0, index + marker.length) : marker) + "/";
+        var el = document.createElement("base");
+        el.href = base;
+        document.head.insertBefore(el, document.head.firstChild);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="#" class="brand">
+          <span class="brand__mark">G</span>
+          <span class="brand__text">
+            Greenwood Estate Care
+            <small>Est. 1998 · Sussex County, NJ</small>
+          </span>
+        </a>
+        <nav class="site-nav" id="nav">
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="tel:+15557654321" class="site-header__phone">(555) 765-4321</a>
+        <button class="site-nav__toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero__image">
+        <img src="images/hero-lawn.png" alt="Manicured estate lawn at Greenwood" />
+      </div>
+      <div class="hero__panel">
+        <p class="hero__eyebrow">Landscape &amp; Lawn Care</p>
+        <h1 class="hero__title">Where every lawn<br /><em>becomes an estate.</em></h1>
+        <p class="hero__lead">
+          For over twenty-five years, Greenwood has tended the finest properties in
+          Sussex County — with the patience, craft, and quiet excellence that
+          distinguished grounds deserve.
+        </p>
+        <a href="#contact" class="btn btn--gold">Request a consultation</a>
+      </div>
+    </section>
+
+    <div class="ornament" aria-hidden="true">
+      <span>✦</span>
+    </div>
+
+    <main>
+      <section class="intro" id="about">
+        <div class="intro__inner">
+          <div class="intro__text">
+            <h2>A tradition of careful stewardship</h2>
+            <p>
+              Greenwood Estate Care was founded on a simple belief: that a well-kept
+              landscape speaks before you ever reach the front door. We serve
+              homeowners who value discretion, consistency, and results you can see
+              from the curb — and enjoy from the terrace.
+            </p>
+            <p>
+              From weekly lawn maintenance to full garden design, our crews arrive
+              on schedule, leave no trace, and treat your property as though it were
+              our own.
+            </p>
+          </div>
+          <figure class="intro__figure">
+            <img src="images/lawn-detail.png" alt="Perfectly striped manicured lawn" />
+            <figcaption>Precision mowing &amp; seasonal care</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="services__head">
+          <h2>Our services</h2>
+          <p>Comprehensive care for lawns, gardens, and outdoor living spaces.</p>
+        </div>
+        <div class="services__grid">
+          <article class="service-card">
+            <h3>Lawn Maintenance</h3>
+            <p>
+              Weekly mowing, edging, fertilization, and aeration programs tailored
+              to your turf. Striped finishes and weed-free beds, season after season.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3>Landscape Design</h3>
+            <p>
+              Custom planting plans, hardscape integration, and garden layouts that
+              complement your home's architecture and mature gracefully over time.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3>Seasonal Planting</h3>
+            <p>
+              Spring bulbs, summer annuals, autumn chrysanthemums, and winter
+              evergreen arrangements — refreshed on a schedule you never need to think about.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3>Estate Maintenance</h3>
+            <p>
+              Hedge trimming, tree and shrub care, irrigation management, and fall
+              leaf removal for larger properties and country estates.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="gallery__banner">
+          <img src="images/garden-path.png" alt="Elegant landscaped garden with stone pathway" />
+          <div class="gallery__caption">
+            <h2>Grounds worth arriving home to</h2>
+            <p>Every project reflects our commitment to proportion, balance, and lasting beauty.</p>
+          </div>
+        </div>
+        <div class="gallery__trio">
+          <figure>
+            <img src="images/hero-lawn.png" alt="Estate lawn overlooking manicured grounds" />
+          </figure>
+          <figure>
+            <img src="images/lawn-detail.png" alt="Close detail of striped lawn" />
+          </figure>
+          <figure>
+            <img src="images/garden-path.png" alt="Formal garden with flowering beds" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="testimonial">
+        <blockquote>
+          <p>
+            "Greenwood transformed our overgrown acre into something worthy of a
+            magazine spread. They are punctual, unobtrusive, and genuinely skilled —
+            the kind of company you keep for decades."
+          </p>
+          <footer>
+            <cite>Margaret &amp; James Whitfield</cite>
+            <span>Hardyston, NJ</span>
+          </footer>
+        </blockquote>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact__inner">
+          <div class="contact__info">
+            <h2>Begin with a consultation</h2>
+            <p>
+              We welcome the opportunity to walk your property and discuss your
+              vision. Estimates are complimentary and without obligation.
+            </p>
+            <ul class="contact__details">
+              <li>
+                <strong>Office</strong>
+                18 Route 517, Lafayette Township, NJ 07848
+              </li>
+              <li>
+                <strong>Telephone</strong>
+                <a href="tel:+15557654321">(555) 765-4321</a>
+              </li>
+              <li>
+                <strong>Correspondence</strong>
+                <a href="mailto:info@greenwoodestate.com">info@greenwoodestate.com</a>
+              </li>
+              <li>
+                <strong>Hours</strong>
+                Mon–Fri 7am – 5pm · Sat by appointment
+              </li>
+            </ul>
+          </div>
+          <form class="contact__form" action="#" method="post">
+            <h3>Inquire</h3>
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Telephone</span>
+              <input type="tel" name="phone" required placeholder="(555) 000-0000" />
+            </label>
+            <label>
+              <span>Email address</span>
+              <input type="email" name="email" placeholder="you@example.com" />
+            </label>
+            <label>
+              <span>How may we assist you?</span>
+              <textarea
+                name="message"
+                rows="4"
+                required
+                placeholder="Tell us about your property and the services you're interested in..."
+              ></textarea>
+            </label>
+            <button type="submit" class="btn btn--green">Send inquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__brand">Greenwood Estate Care</p>
+        <p class="site-footer__tagline">Refined landscape stewardship · Sussex County, New Jersey</p>
+        <nav class="site-footer__nav">
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p class="site-footer__copy">&copy; 2026 Greenwood Estate Care. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

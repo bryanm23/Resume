@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BlueStream Car Wash — premium express and full-service washes in Sparta, NJ. Spotless results, spot-free rinse, and unlimited membership plans."
+    />
+    <title>BlueStream Car Wash | Sparta, NJ</title>
+    <script>
+      (function () {
+        var path = window.location.pathname.replace(/\/index\.html$/, "/");
+        var marker = "/carwash";
+        var index = path.indexOf(marker);
+        var base = (index >= 0 ? path.slice(0, index + marker.length) : marker) + "/";
+        var el = document.createElement("base");
+        el.href = base;
+        document.head.insertBefore(el, document.head.firstChild);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="topbar" id="topbar">
+      <a href="#" class="topbar__logo">Blue<span>Stream</span></a>
+      <div class="topbar__links" id="nav">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <a href="#pricing" class="topbar__cta">Join — $19/mo</a>
+      <button class="topbar__menu" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <header class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="images/carwash-hero.png" alt="" />
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__body">
+        <p class="hero__tag">Sparta, NJ · Open daily 7–8</p>
+        <h1 class="hero__headline">
+          Your ride.<br />
+          <em>Reborn.</em>
+        </h1>
+        <p class="hero__desc">
+          Premium tunnel wash, hand-finished details, and unlimited memberships —
+          in and out in five minutes flat.
+        </p>
+        <div class="hero__btns">
+          <a href="#pricing" class="btn btn--red">View packages</a>
+          <a href="#visit" class="btn btn--glass">Get directions</a>
+        </div>
+        <dl class="hero__metrics">
+          <div><dt>5 min</dt><dd>Express wash</dd></div>
+          <div><dt>4.8★</dt><dd>Google rating</dd></div>
+          <div><dt>Free</dt><dd>Vacuums</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Spot-free rinse</span><span>·</span>
+        <span>Eco-friendly soaps</span><span>·</span>
+        <span>Soft-touch brushes</span><span>·</span>
+        <span>Member priority lane</span><span>·</span>
+        <span>Tire shine included</span><span>·</span>
+        <span>Spot-free rinse</span><span>·</span>
+        <span>Eco-friendly soaps</span><span>·</span>
+        <span>Soft-touch brushes</span><span>·</span>
+        <span>Member priority lane</span><span>·</span>
+        <span>Tire shine included</span><span>·</span>
+      </div>
+    </div>
+
+    <main>
+      <section class="services" id="services">
+        <div class="wrap">
+          <header class="services__head">
+            <h2>Pick your clean</h2>
+            <p>Three levels — one spotless result every time.</p>
+          </header>
+          <div class="bento">
+            <article class="bento__item bento__item--wide">
+              <span class="bento__num">01</span>
+              <h3>Express Tunnel</h3>
+              <p>Underbody flush, triple-foam polish, wheel scrub, and spot-free rinse. Under five minutes, every time.</p>
+              <span class="bento__price">From $12</span>
+            </article>
+            <article class="bento__item">
+              <span class="bento__num">02</span>
+              <h3>Full Service</h3>
+              <p>Hand dry, tire shine, rain repellent, and interior vacuum.</p>
+              <span class="bento__price">From $24</span>
+            </article>
+            <article class="bento__item">
+              <span class="bento__num">03</span>
+              <h3>Detail & Ceramic</h3>
+              <p>Clay bar, paint correction, leather care, ceramic coating.</p>
+              <span class="bento__price">From $89</span>
+            </article>
+            <article class="bento__item bento__item--accent">
+              <span class="bento__num">∞</span>
+              <h3>Unlimited Pass</h3>
+              <p>Wash as often as you want. Member lane. Cancel anytime.</p>
+              <span class="bento__price">$19 / mo</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="wrap">
+          <header class="pricing__head">
+            <h2>Straight-up pricing</h2>
+            <p>No hidden fees. No upsells at the gate.</p>
+          </header>
+          <div class="plans">
+            <article class="plan">
+              <h3>Express</h3>
+              <p class="plan__amt"><sup>$</sup>12</p>
+              <p class="plan__per">per wash</p>
+              <ul>
+                <li>Exterior wash & rinse</li>
+                <li>Wheel & tire clean</li>
+                <li>Spot-free dry</li>
+              </ul>
+              <a href="#visit" class="btn btn--outline">Drive up</a>
+            </article>
+            <article class="plan plan--hot">
+              <div class="plan__ribbon">Best value</div>
+              <h3>Unlimited</h3>
+              <p class="plan__amt"><sup>$</sup>19</p>
+              <p class="plan__per">per month</p>
+              <ul>
+                <li>Unlimited express washes</li>
+                <li>Member priority lane</li>
+                <li>Free self-serve vacuums</li>
+                <li>Cancel anytime</li>
+              </ul>
+              <a href="#visit" class="btn btn--red">Sign up</a>
+            </article>
+            <article class="plan">
+              <h3>Full Detail</h3>
+              <p class="plan__amt"><sup>$</sup>89</p>
+              <p class="plan__per">per visit</p>
+              <ul>
+                <li>Interior & exterior detail</li>
+                <li>Shampoo & leather care</li>
+                <li>Engine bay clean</li>
+              </ul>
+              <a href="#visit" class="btn btn--outline">Book now</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="perks">
+        <div class="wrap perks__grid">
+          <div class="perks__copy">
+            <h2>Built different</h2>
+            <p>Locally owned in Sparta — equipment and products chosen to protect your paint, not just clean it.</p>
+          </div>
+          <ul class="perks__list">
+            <li>
+              <strong>Purified rinse</strong>
+              <span>Zero water spots, guaranteed</span>
+            </li>
+            <li>
+              <strong>Biodegradable soaps</strong>
+              <span>Tough on grime, easy on the planet</span>
+            </li>
+            <li>
+              <strong>Paint-safe brushes</strong>
+              <span>Soft-touch tech on every bay</span>
+            </li>
+            <li>
+              <strong>Free vacuums</strong>
+              <span>Included with every wash</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="wrap">
+          <blockquote class="reviews__lead">
+            <p>"Best car wash in Sussex County. My truck looks brand new every time — the unlimited plan pays for itself in two visits."</p>
+            <footer>— Mike D., Sparta</footer>
+          </blockquote>
+          <div class="reviews__row">
+            <figure class="reviews__mini">
+              <div class="reviews__stars">★★★★★</div>
+              <blockquote>"Fast, affordable, always consistent."</blockquote>
+              <figcaption>Rachel K.</figcaption>
+            </figure>
+            <figure class="reviews__mini">
+              <div class="reviews__stars">★★★★★</div>
+              <blockquote>"Got all the winter salt off. Bays are spotless."</blockquote>
+              <figcaption>Tom B.</figcaption>
+            </figure>
+            <figure class="reviews__mini">
+              <div class="reviews__stars">★★★★★</div>
+              <blockquote>"Full detail before selling — looked factory fresh."</blockquote>
+              <figcaption>Angela S.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit" id="visit">
+        <div class="wrap visit__grid">
+          <div class="visit__info">
+            <h2>Pull in anytime</h2>
+            <p>No appointment needed for express and full-service washes.</p>
+            <address>
+              42 Main St<br />
+              Sparta, NJ 07871
+            </address>
+            <ul class="visit__meta">
+              <li><a href="tel:+15559876543">(555) 987-6543</a></li>
+              <li><a href="mailto:hello@bluestreamcarwash.com">hello@bluestreamcarwash.com</a></li>
+              <li>Mon–Sun · 7am – 8pm</li>
+            </ul>
+          </div>
+          <form class="visit__form" action="#" method="post">
+            <h3>Start unlimited membership</h3>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Phone</span>
+              <input type="tel" name="phone" required placeholder="(555) 000-0000" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label>
+              <span>License plate</span>
+              <input type="text" name="plate" required placeholder="ABC-1234" />
+            </label>
+            <button type="submit" class="btn btn--red btn--block">Sign up</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot__inner">
+        <p>&copy; 2026 BlueStream Car Wash · Sparta, NJ</p>
+        <div class="foot__links">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#visit">Visit</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
